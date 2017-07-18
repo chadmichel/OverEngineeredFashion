@@ -1,0 +1,94 @@
+<style>
+  body {
+    min-width: 1000px;
+  }
+
+  .container {
+    width: 970px;
+    max-width: none !important;
+  }
+
+  #bill {
+    height: 300px;
+    width: 250px;
+  }
+
+  #shoes {
+    height: 50px;
+    width: 250px;
+    background-color: pink;
+  }
+
+  .shirtSelector {
+    height: 50px;
+    width: 50px;
+    border: 50px; 
+    border-style: white;
+    background-color: orange;
+  }
+
+  .pantSelector {
+    height: 50px;
+    width: 50px;
+    background-color: orange;
+  }
+
+  .shoeSelector {
+    height: 50px;
+    width: 50px;
+    background-color: orange;
+  }
+</style>
+
+<div class="container">
+
+  <div class="row">
+
+    <div class="col-xs-4">
+
+      <img id="bill" src="{{outputUrl}}" />
+
+    </div>
+    <div class="col-xs-4">
+      <div class="row" style="height: 60px;">
+        
+        <button (click)="selectShirt(0)" 
+        [style.background-color]="shirt == 0 ? 'black': 'white'" > 
+          <img class="shirtSelector" src="https://whateverbillhasstorage.blob.core.windows.net/whateverbillhasstatic/shirt_1.png"  /> 
+          </button>        
+        <button (click)="selectShirt(1)" 
+        [style.background-color]="shirt == 1 ? 'black': 'white'"> 
+          <img class="shirtSelector" src="https://whateverbillhasstorage.blob.core.windows.net/whateverbillhasstatic/shirt_2.png" /> 
+          </button>
+        <button (click)="selectShirt(2)" 
+        [style.background-color]="shirt == 2 ? 'black': 'white'"> 
+          <img class="shirtSelector" src="https://whateverbillhasstorage.blob.core.windows.net/whateverbillhasstatic/shirt_3.png" /> 
+          </button>
+        <button (click)="selectShirt(3)" 
+        [style.background-color]="shirt == 3 ? 'black': 'white'"> 
+          <img class="shirtSelector" src="https://whateverbillhasstorage.blob.core.windows.net/whateverbillhasstatic/shirt_4.png" /> 
+          </button>
+      </div>
+      <div class="row">
+        <button (click)="selectPants(0)"  
+        [style.background-color]="pants == 0 ? 'black': 'white'"> 
+          <img class="pantSelector" src="https://whateverbillhasstorage.blob.core.windows.net/whateverbillhasstatic/pants_1.png" /> 
+          </button>
+        <button (click)="selectPants(1)" 
+        [style.background-color]="pants == 1 ? 'black': 'white'"> 
+          <img class="pantSelector" src="https://whateverbillhasstorage.blob.core.windows.net/whateverbillhasstatic/pants_2.png" /> 
+          </button>
+        <button (click)="selectPants(2)" 
+        [style.background-color]="pants == 2 ? 'black': 'white'"> 
+          <img class="pantSelector"src="https://whateverbillhasstorage.blob.core.windows.net/whateverbillhasstatic/pants_3.png" /> 
+          </button>
+        <button (click)="selectPants(3)" 
+        [style.background-color]="pants == 3 ? 'black': 'white'"> 
+          <img class="pantSelector" src="https://whateverbillhasstorage.blob.core.windows.net/whateverbillhasstatic/pants_4.png" /> 
+          </button>
+      </div>
+    </div>
+
+  </div>
+
+</div>
